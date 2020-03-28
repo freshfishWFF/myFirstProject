@@ -1,0 +1,219 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 面包屑导航样式 */
+.bread-crumb{
+  border-bottom: 1px solid #25bfaf;
+  padding: 8px;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+}
+/* 分类栏样式 */
+.container>.header{
+  display: block;
+  padding: 0;margin: 0;
+  list-style: none;
+}
+.container>.header>li{
+  font-size: 12px;
+}
+.container>.header>li div{
+  /* display: inline-block; */
+  float: left;
+  line-height: 35px;
+}
+.container>.header>li>div:first-child{
+  width: 100px;
+  padding-left: 10px;
+  background: #ececebbe;
+}
+.container>.header>li>div:last-child{
+  width: 1100px;
+  position: relative;
+  padding-right: 40px;
+}
+.nameList{
+  margin-left: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  height: 35px;
+}
+.nameList.cHover{
+  height: fit-content;
+}
+.nameList>span>a{
+  display: inline-block;
+  width:130px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+.nameList+a{
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+/* 排序按钮 */
+.container>.orderBy{
+  list-style: none;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 5px;
+  font-size: 13px;
+  margin: 10px 0;
+  cursor: default;
+}
+.container>.orderBy>li{
+  float: left;
+  border:1px solid #c1c1c1;
+  padding: 0 10px;
+  height: 25px;
+  line-height: 25px;
+}
+/* .container>.orderBy>li+li{
+  margin-left: 25px;
+} */
+.orderBy>li:nth-child(3){
+  position: relative;
+}
+.orderBy>li:nth-child(3)>.price{
+  float: right;
+  margin-left: 10px;
+  text-align: center;
+}
+.orderBy>li:nth-child(3):hover >.price{
+  display: block;
+}
+.orderBy>li:nth-child(3)>.price>input{
+  max-width: 30px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 18px;
+}
+/* 商品列表页 */
+.container .productList{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.container .productList .productItem{
+  /* box-sizing: content-box; */
+  width: 230px;
+  height: 300px;
+  border: 1px solid #ecebeb;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px 5px 5px 5px;
+  margin: 5px;
+}
+.container .productList .productItem:hover{
+  box-shadow: 0 0 5px #25bfaf;
+}
+.container .productList .productItem img{
+  transition: transform 0.4s linear;
+}
+.container .productList .productItem img:hover{
+  transform: scale(1.06);
+}
+.container .productList .productItem>a:nth-child(2){
+  margin: 10px 0;
+  display: block;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #000;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+}
+.container .productList .productItem> a:nth-child(2):hover{
+  color: #0aa1ed;
+}
+.container .productList .productItem>span{
+  color: #c30;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.container .productList .productItem>span+span{
+  text-decoration: line-through;
+  color: #c1c1c1;
+}
+.container .productList .productItem>.option{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .productList .productItem>.option>a{
+  height: 32px;
+  line-height: 32px;
+  color: #d2d2d2;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right: 5px;
+  border:1px solid #d2d2d2;
+}
+.container .productList .productItem>.option>a:first-child{
+  background:url(../images/carttt.png) no-repeat 5px center;
+  background-size: 20px;
+}
+.container .productList .productItem>.option>a:last-child{
+  background:url(../images/save1.png) no-repeat 5px center;
+  background-size: 20px;
+}
+.container .productList .productItem>.option>a:hover{
+  color: #25bfaf;
+  text-decoration: none;
+  border-color: #25bfaf;
+}
+.container .productList .productItem>.option>a:first-child:hover{
+  background-image: url(../images/carttt1.png);
+}
+.container .productList .productItem>.option>a:last-child:hover{
+  background-image: url(../images/save.png);
+}
+
+/* 分页栏 */
+.container>.page{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.container>.page a{
+  display:inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin:0 3px;
+  border:1px solid #d2d2d2;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+.container>.page>a{
+  width: 60px;
+}
+.container>.page a.active{
+  color:#d2d2d2
+}

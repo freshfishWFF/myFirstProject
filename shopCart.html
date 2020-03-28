@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/shopCart.css">
+  <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+  <script src="server/ajax.js"></script>
+</head>
+<body>
+  <div id="commHead" style="height: 136px; width: 100%;"></div>
+  <div class="container">
+    <div id="cart">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              图片
+            </th>
+            <th>
+              商品信息
+            </th>
+            <th>
+              单价
+            </th>
+            <th>
+              数量
+            </th>
+            <th>
+              总价
+            </th>
+            <th>
+              操作
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td> <input type="checkbox"></td>
+            <td>
+              <a href="" title="失乐园">
+                <img src="images/index/newbook/25182491-1_l_6.jpg" alt="">
+              </a>                        
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum aut tenetur nemo laborum inventore optio
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <a href="">删除</a>
+              <a href="">加入收藏</a>
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox"></td>
+            <td>
+              <a href="" title="失乐园">
+                <img src="images/index/newbook/25182491-1_l_6.jpg" alt="">
+              </a>                        
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum aut tenetur nemo laborum inventore optio
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <a href="">删除</a>
+              <a href="">加入收藏</a>
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox"></td>
+            <td>
+              <a href="" title="失乐园">
+                <img src="images/index/newbook/25182491-1_l_6.jpg" alt="">
+              </a>                        
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum aut tenetur nemo laborum inventore optio
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox"></td>
+            <td>
+              <a href="" title="失乐园">
+                <img src="images/index/newbook/25182491-1_l_6.jpg" alt="">
+              </a>                        
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum aut tenetur nemo laborum inventore optio
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox"></td>
+            <td>
+              <a href="" title="失乐园">
+                <img src="images/index/newbook/25182491-1_l_6.jpg" alt="">
+              </a>                        
+            </td>
+            <td>
+              <a href="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum aut tenetur nemo laborum inventore optio
+              </a>            
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+            <td>
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </td>
+            <td>
+              ￥ 34.20
+            </td>
+          </tr>  -->
+        </tbody>
+        
+      </table>
+      <div class="tota">
+        <div class="clear-fix">
+          <input type="checkbox" id="cb"><label for="cb">全选</label>
+          <button id="buy">立即下单</button>
+          <span id="totalPrice">￥0.00</span>       
+        </div>       
+      </div>
+    </div>
+  </div>
+  <script src="server/shopCart.js"></script>
+  <script>
+    $("#commHead").load("comm.html")
+  </script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

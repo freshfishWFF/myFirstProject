@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/comm.css">
+  <script src="js/time.js"></script>
+  <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+  
+</head>
+<body onload="clock()">
+  <div id="nav_top">
+    <div id="nav_top_center" class="center">
+      <ul>
+        <li>
+          欢迎光临，<a href="javascript:reg();">请登录</a><a href="javascript:;" style="display:none">xiaowen</a>&nbsp;&nbsp;<a href="javascript:;" style="display: none;">注销</a>&nbsp;&nbsp;<a href="#">成为会员</a>
+        </li>
+        <li>
+          <a href="#">我的书库</a>
+        </li>
+      </ul>
+      <p>今天是：<b id="current"></b></p>
+    </div>
+  </div>
+  <div id="nav_cen">
+    <div id="nav_cen_center" class="center">
+      <div id="logo"></div>
+      <div id="search">
+        <input type="text" id="searchbox"> 
+        <input type="button" id="button">
+        <div id="showBar" style="display: none;">
+          <!-- <a href="">少年的你</a>
+          <a href="">庆余年</a> -->
+        </div>
+      </div>
+      <div id="my_shop_cart">
+        <input type="button" id="shopcart" value="购物车">
+      </div>
+      <div id="my_order">
+        <input type="button" id="myorder" value="我的订单">
+      </div>
+    </div>
+  </div>
+  <div> 
+    <div id="nav-bottom">
+      <ul id="nav-bottom_top" class="center">
+        <li id="all-book">全部图书分类
+          <div id="detail-list">
+            <div class="list">
+              <dl>
+                <dt class="a">
+                  <span>特色书单</span>
+                </dt>
+                <!--<dd></dd>-->
+              </dl>
+              <!-- 侧边详情栏，默认为隐藏状态-->
+              <div class="hide-bar">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>特价</dt>
+                    <dd>
+                      <a href="#">当读VIP</a>
+                      <a href="#">免费书</a>
+                      <a href="#">特价书</a>
+                      <a href="#">限时购</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>网络文学</dt>
+                    <dd>
+                      <a href="#">男频</a>
+                      <a href="#">女频</a>
+                      <a href="#">玄幻科幻</a>
+                      <a href="#">现代都市</a>
+                      <a href="#">武侠仙侠</a>
+                      <a href="#">现代言情</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>小说</dt>
+                    <dd>
+                      <a href="#">侦探/悬疑/推理</a>
+                      <a href="#">玄幻/惊悚</a>
+                      <a href="#">武侠小说</a>
+                      <a href="#">外国小说</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文艺</dt>
+                    <dd>
+                      <a href="#">传记</a>
+                      <a href="#">随笔</a>
+                      <a href="#">文学作品集</a>
+                      <a href="#">纪实文学</a>
+                      <a href="#">艺术</a>
+                      <a href="#">摄影</a>
+                      <a href="#">文学评论与鉴赏</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>生活</dt>
+                    <dd>
+                      <a href="#">亲子/家教</a>
+                      <a href="#">育儿/早教</a>
+                      <a href="#">两性关系</a>
+                      <a href="#">保健/养生</a>
+                      <a href="#">旅游/地图</a>
+                      <a href="#">烹饪/美食</a>
+                      <a href="#">时尚/美妆</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>教育/科技</dt>
+                    <dd>
+                      <a href="#">考试</a>
+                      <a href="#">外语</a>
+                      <a href="#">中小学教辅</a>
+                      <a href="#">工具书</a>
+                      <a href="#">科普读物</a>
+                      <a href="#">自然科学</a>
+                    </dd>
+                  </dl>
+                </div>
+  
+              </div>
+            </div>
+            <div class="list">
+              <dl>
+                <dt class="a">
+                  教育
+                </dt>
+              </dl>
+              <div class="hide-bar" style="top: 40px">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>
+                      教材
+                    </dt>
+                    <dd>
+                      <a href="#">研究生/本科/专科教材</a>
+                      <a href="#">高职高专教材</a>
+                      <a href="#">中职教材</a>
+                      <a href="#">成人教育教材</a>
+                      <a href="#">职业技术培训教材</a>
+                      <a href="#">公共课</a>
+                      <a href="#">经济管理类</a>
+                      <a href="#">工学类</a>
+                      <a href="#">文法类</a>
+                      <a href="#">医学类</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>外语</dt>
+                    <dd>
+                      <a href="#">英语综合教程</a>
+                      <a href="#">英语专项训练</a>
+                      <a href="#">英语读物</a>
+                      <a href="#">英语考试</a>
+                      <a href="#">英语工具书</a>
+                      <a href="#">新概念</a>
+                      <a href="#">口语</a>
+                      <a href="#">听力</a>
+                      <a href="#">英文版读物</a>
+                      <a href="#">IELTS</a>
+                      <a href="#">TOEFL</a>
+                      <a href="#">GRE</a>
+                      <a href="#">GMAT</a>
+                      <a href="#">SAT</a>
+                      <a href="#">CET-4</a>
+                      <a href="#">CET-6</a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="list">
+              <dl>
+                <dt class="a">
+                  小说
+                </dt>
+              </dl>
+              <div class="hide-bar" style="top:42px;">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>小说</dt>
+                    <dd>
+                      <a href="#">中国当代小说</a>
+                      <a href="#">中国近代</a>
+                      <a href="#">中国古典小说</a>
+                      <a href="#">外国小说</a>
+                      <a href="#">侦探/悬疑/推理</a>
+                      <a href="#">惊悚/恐怖</a>
+                      <a href="#">魔幻</a>
+                      <a href="#">科幻</a>
+                      <a href="#">武侠</a>
+                      <a href="#">军事</a>
+                      <a href="#">社会</a>
+                      <a href="#">都市</a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="list">
+              <dl>
+                <dt class="a">文艺</dt>
+              </dl>
+              <div class="hide-bar" style="top: 82px;">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>文学</dt>
+                    <dd>
+                      <a href="#">文集</a>
+                      <a href="#">纪实文学</a>
+                      <a href="#">中国古诗词</a>
+                      <a href="#">中国当代诗歌</a>
+                      <a href="#">外国诗歌</a>
+                      <a href="#">中国当代随笔</a>
+                      <a href="#">外国随笔</a>
+                      <a href="#">民间文学</a>
+                      <a href="#">文学类考试</a>
+                      <a href="#">文学评论与鉴赏</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>传记</dt>
+                    <dd>
+                      <a href="#">财经人物</a>
+                      <a href="#">历代帝王</a>
+                      <a href="#">领袖首脑</a>
+                      <a href="#">军事人物</a>
+                      <a href="#">政治人物</a>
+                      <a href="#">历史人物</a>
+                      <a href="#">哲学家</a>
+                      <a href="#">年谱</a>
+                      <a href="#">自传</a>
+                      <a href="#">影视明星</a>
+                      <a href="#">体育明星</a>
+                      <a href="#">教育家</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>艺术</dt>
+                    <dd>
+                      <a href="#">艺术理论</a>
+                      <a href="#">绘画</a>
+                      <a href="#">书法/篆刻</a>
+                      <a href="#">影视/媒体艺术</a>
+                      <a href="#">音乐</a>
+                      <a href="#">舞蹈</a>
+                      <a href="#">雕塑</a>
+                      <a href="#">建筑艺术</a>
+                      <a href="#">小人书/连环画</a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="list">
+              <dl>
+                <dt class="a">人文社科</dt>
+              </dl>
+              <div class="hide-bar" style="top: 82px;">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>历史</dt>
+                    <dd>
+                      <a href="#">中国史</a>
+                      <a href="#">世界史</a>
+                      <a href="#">史家名著</a>
+                      <a href="#">文物考古</a>
+                      <a href="#">史学理论</a>
+                      <a href="#">地方史志</a>
+                      <a href="#">历史地理</a>
+                      <a href="#">民族史</a>
+                      <a href="#">历史随笔</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文化</dt>
+                    <dd>
+                      <a href="#">传统文化</a>
+                      <a href="#">文化评述</a>
+                      <a href="#">文化随笔</a>
+                      <a href="#">各国文化</a>
+                      <a href="#">地域文化</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>心理学</dt>
+                    <dd>
+                      <a href="#">心理百科</a>
+                      <a href="#">心理学著作</a>
+                      <a href="#">心理学理论</a>
+                      <a href="#">色彩心理学</a>
+                      <a href="#">社会心理学</a>
+                      <a href="#">人格心理学</a>
+                      <a href="#">儿童心理学</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>哲学/宗教</dt>
+                    <dd>
+                      <a href="#">古代哲学</a>
+                      <a href="#">世界哲学</a>
+                      <a href="#">伦理学</a>
+                      <a href="#">没学</a>
+                      <a href="#">哲学史</a>
+                      <a href="#">近现代哲学</a>
+                      <a href="#">佛教</a>
+                      <a href="#">基督教</a>
+                      <a href="#">道教</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>社会科学</dt>
+                    <dd>
+                      <a href="#">社会科学总论</a>
+                      <a href="#">社会学</a>
+                      <a href="#">文化人类学</a>
+                      <a href="#">新闻传播</a>
+                      <a href="#">语言文学</a>
+                      <a href="#">名家作品集</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>法律</dt>
+                    <dd>
+                      <a href="#">民法</a>
+                      <a href="#">经济法</a>
+                      <a href="#">法律法规</a>
+                      <a href="#">法律实务</a>
+                      <a href="#">理论法学</a>
+                      <a href="#">刑法</a>
+                      <a href="#">法律随笔</a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="list">
+              <dl>
+                <dt class="a">科技</dt>
+              </dl>
+              <div class="hide-bar" style="top: 82px;">
+                <div class="hide-bar-content">
+                  <dl>
+                    <dt>科普读物</dt>
+                    <dd>
+                      <a href="#">宇宙知识</a>
+                      <a href="#">人类故事</a>
+                      <a href="#">生物世界</a>
+                      <a href="#">科学世界</a>
+                      <a href="#">生态环境</a>
+                      <a href="#">百科知识</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>计算机/网络</dt>
+                    <dd>
+                      <a href="#">计算机理论</a>
+                      <a href="#">硬件 外部设备 维修</a>
+                      <a href="#">操作系统/系统开发</a>
+                      <a href="#">数据库</a>
+                      <a href="#">程序设计</a>
+                      <a href="#">网络与数据通信</a>
+                      <a href="#">软件工程/开发项目管理</a>
+                      <a href="#">人工智能</a>
+                      <a href="#">计算机考试认证</a>
+                      <a href="#">信息安全</a>
+                      <a href="#">计算机体系结构</a>
+                      <a href="#">计算机教材</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>自然科学</dt>
+                    <dd>
+                      <a href="#">总论</a>
+                      <a href="#">数学</a>
+                      <a href="#">力学</a>
+                      <a href="#">物理学</a>
+                      <a href="#">化学</a>
+                      <a href="#">天文学</a>
+                      <a href="#">地球科学</a>
+                      <a href="#">科技史</a>
+                      <a href="#">自然科学类考试</a>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>工业技术</dt>
+                    <dd>
+                      <a href="#">一般工业技术</a>
+                      <a href="#">机械/仪表工业</a>
+                      <a href="#">电工技术</a>
+                      <a href="#">电子 通信</a>
+                      <a href="#">化学工业</a>
+                      <a href="#">冶金工业</a>
+                      <a href="#">矿业工程</a>
+                      <a href="#">能源与动力工程</a>
+                      <a href="#">原子能技术</a>
+                      <a href="#">水利工程</a>
+                      <a href="#">汽车与交通运输</a>
+                      <a href="#">航天/航空</a>
+                      <a href="#">环境科学</a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/productGroup.html?name=童书">童书</a></li>
+        <li><a href="/productGroup.html?name=教辅">教辅</a></li>
+        <li><a href="/productGroup.html?name=小说">小说</a></li>
+        <li><a href="/productGroup.html?name=文艺">文艺</a></li>
+        <li><a href="/productGroup.html?name=艺术">艺术</a></li>
+        <li><a href="/productGroup.html?name=成功励志">成功励志</a></li>
+        <li><a href="/productGroup.html?name=管理">管理</a></li>
+      </ul>
+    </div>
+  </div> 
+  <script src="server/ajax.js"></script>
+  <script src="js/comm.js"></script>
+</body>
+</html>

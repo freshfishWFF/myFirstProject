@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="content">
+    <div>
+      <input type="file" name="" id="picture" class="btn btn-danger">
+    </div>
+    <div>
+      <img src="" alt="" class="hide">
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $("#picture").change(function(){
+        var current_pic = this.files[0];
+
+        preview_picture(current_pic);
+      })
+    })
+    function preview_picture(pic){
+      var r = new FileReader();
+      r.readAsDataURL(pic);
+      console.log(r);
+      r.onload=function(e){
+        $(".content > div >img").attr("src",this.result).show();
+      };
+    }
+  </script>
+</body>
+</html>

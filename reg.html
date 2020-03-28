@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reg.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="js/reg.js"></script>
+</head>
+<body onload="turnAction()">
+  <div id="container">
+    <div class="content page1">
+      <h2>用户注册</h2>
+      <div class="txt">
+        <input type="text" id="regUserId" onblur="regCheckUserId()" onfocus="regShowUserId()">
+        <span data-placeholder="用户名" id="regUserIdInfo"></span>
+      </div>
+      <div class="txt">
+        <input type="password" id="regUserPwd" onfocus="regShowUserPwd()" onblur="regCheckUserPwd(),regCheckRepeatPwd()">
+        <span data-placeholder="密码" id="regUserPwdInfo"></span>
+      </div>
+      <div class="txt">
+        <input type="password" id="regRepeatPwd" onblur="regCheckRepeatPwd()">
+        <span data-placeholder="确认密码" id="regRepeatPwdInfo"></span>
+      </div>
+      <div>
+        <button type="button" name="button" class="step" onclick="next()" id="regNextStep">下一步</button>
+      </div>
+      <p class="info">
+        已经拥有账号?<a href="javascript:turnLog()">登录</a>
+      </p>
+    </div>
+    <div class="content page2">
+      <h2>信息完善</h2>
+      <a href="javascript:back()" >上一步</a>
+      <div class="txt">
+        <input type="text" id="realName" onblur="regCheckRealName()" onfocus="showRealName()">
+        <span data-placeholder="真实姓名" id="realNameInfo"></span>
+      </div>
+      <div class="txt">
+        <input type="text" id="regPhone" onblur="regCheckPhone()">
+        <span data-placeholder="手机号" id="regPhoneInfo"></span>
+      </div>
+      <div class="txt">
+        <input type="text" id="regEmail" onblur="regCheckEmail()">
+        <span data-placeholder="邮箱" id="regEmailInfo"></span>
+      </div>
+      <div class="txt sex">
+        <label for="0"><input type="radio" class="sex" name="sex" id="0">女</label>
+        <label for="1"><input type="radio" class="sex" name="sex" id="1">男</label>
+        <label for="-1"><input type="radio" checked class="sex" name="sex" id="-1">保密</label>
+      </div>
+      <button class="step" onclick="userReg()">注册</button>
+    </div>
+    <!-- 登录界面 -->
+    <div class="content page3">
+      <h2>用户登录</h2>
+      <div class="txt">
+        <input type="text" id="logUserId" onblur="logCheckUserId()" onfocus="logShowUserId()">
+        <span data-placeholder="用户名" id="logUserIdInfo" ></span>
+      </div>
+      <div class="txt">
+        <input type="password" id="logPwd" onblur="logCheckPwd()" onfocus="logShowPwd()">
+        <span data-placeholder="密码" id="logPwdInfo"></span>
+        <span id="showPwd" onmousedown="showPwdDetail()" onmouseup="hidePwdDetail()">👁</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="d-block">
+          <input  type="checkbox" id="autologin"><label for="autologin">&nbsp;自动登录</label>
+        </div>
+        <a href="" class="d-block">忘记密码？</a>
+      </div>
+      <button class="step login" onclick="login()">登录</button>
+      <p class="text-right mt-2"><a href="javascript:back()" class="mr-1">立即注册</a></p>
+    </div>
+
+  </div>
+  <script>
+    $(".txt input").on("focus",function(){
+      $(this).addClass("focus");
+    });
+    $(".txt input").on("blur",function(){
+      if($(this).val()=="")
+      $(this).removeClass("focus");
+    });
+
+  </script>
+</body>
+</html>

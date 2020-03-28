@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>图书，享你所想</title>
+  <!-- <base target="_blank"> -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/index.js"></script>
+  <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="nav_top">
+    <div id="nav_top_center" class="center">
+      <ul>
+        <li>
+          欢迎光临，<a href="javascript:log()" target="_self">请登录</a><a href="javascript:;" style="display:none">xiaowen</a>&nbsp;&nbsp;<a href="" style="display: none;">注销</a>&nbsp;&nbsp;<a href="#">成为会员</a>
+        </li>
+        <li>
+          <a href="#">我的书库</a>
+        </li>
+      </ul>
+      <p>今天是：<b id="current"></b></p>
+    </div>
+  </div>
+  <div id="nav_cen">
+    <div id="nav_cen_center" class="center">
+      <div id="logo"></div>
+      <div id="search">
+        <input type="text" id="searchbox">
+        <input type="button" id="button">
+        <div id="showBar" style="display: none;">
+          <!-- <a href="">少年的你</a>
+          <a href="">庆余年</a> -->
+        </div>
+      </div>
+      <div id="my_shop_cart">
+        <input type="button" id="shopcart" value="购物车">
+
+      </div>
+      <div id="my_order">
+        <input type="button" id="myorder" value="我的订单">
+      </div>
+    </div>
+  </div>
+  <div id="nav-bottom">
+    <ul id="nav-bottom_top" class="center">
+      <li id="all-book">全部图书分类
+        <div id="detail-list">
+          <div class="list">
+            <dl>
+              <dt class="a">
+                <span>特色书单</span>
+              </dt>
+              <!--<dd></dd>-->
+            </dl>
+            <!-- 侧边详情栏，默认为隐藏状态-->
+            <div class="hide-bar">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>特价</dt>
+                  <dd>
+                    <a href="#">当读VIP</a>
+                    <a href="#">免费书</a>
+                    <a href="#">特价书</a>
+                    <a href="#">限时购</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>网络文学</dt>
+                  <dd>
+                    <a href="#">男频</a>
+                    <a href="#">女频</a>
+                    <a href="#">玄幻科幻</a>
+                    <a href="#">现代都市</a>
+                    <a href="#">武侠仙侠</a>
+                    <a href="#">现代言情</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>小说</dt>
+                  <dd>
+                    <a href="#">侦探/悬疑/推理</a>
+                    <a href="#">玄幻/惊悚</a>
+                    <a href="#">武侠小说</a>
+                    <a href="#">外国小说</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>文艺</dt>
+                  <dd>
+                    <a href="#">传记</a>
+                    <a href="#">随笔</a>
+                    <a href="#">文学作品集</a>
+                    <a href="#">纪实文学</a>
+                    <a href="#">艺术</a>
+                    <a href="#">摄影</a>
+                    <a href="#">文学评论与鉴赏</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>生活</dt>
+                  <dd>
+                    <a href="#">亲子/家教</a>
+                    <a href="#">育儿/早教</a>
+                    <a href="#">两性关系</a>
+                    <a href="#">保健/养生</a>
+                    <a href="#">旅游/地图</a>
+                    <a href="#">烹饪/美食</a>
+                    <a href="#">时尚/美妆</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>教育/科技</dt>
+                  <dd>
+                    <a href="#">考试</a>
+                    <a href="#">外语</a>
+                    <a href="#">中小学教辅</a>
+                    <a href="#">工具书</a>
+                    <a href="#">科普读物</a>
+                    <a href="#">自然科学</a>
+                  </dd>
+                </dl>
+              </div>
+
+            </div>
+          </div>
+          <div class="list">
+            <dl>
+              <dt class="a">
+                教育
+              </dt>
+            </dl>
+            <div class="hide-bar" style="top: 40px">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>
+                    教材
+                  </dt>
+                  <dd>
+                    <a href="#">研究生/本科/专科教材</a>
+                    <a href="#">高职高专教材</a>
+                    <a href="#">中职教材</a>
+                    <a href="#">成人教育教材</a>
+                    <a href="#">职业技术培训教材</a>
+                    <a href="#">公共课</a>
+                    <a href="#">经济管理类</a>
+                    <a href="#">工学类</a>
+                    <a href="#">文法类</a>
+                    <a href="#">医学类</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>外语</dt>
+                  <dd>
+                    <a href="#">英语综合教程</a>
+                    <a href="#">英语专项训练</a>
+                    <a href="#">英语读物</a>
+                    <a href="#">英语考试</a>
+                    <a href="#">英语工具书</a>
+                    <a href="#">新概念</a>
+                    <a href="#">口语</a>
+                    <a href="#">听力</a>
+                    <a href="#">英文版读物</a>
+                    <a href="#">IELTS</a>
+                    <a href="#">TOEFL</a>
+                    <a href="#">GRE</a>
+                    <a href="#">GMAT</a>
+                    <a href="#">SAT</a>
+                    <a href="#">CET-4</a>
+                    <a href="#">CET-6</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <dl>
+              <dt class="a">
+                小说
+              </dt>
+            </dl>
+            <div class="hide-bar" style="top:42px;">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>小说</dt>
+                  <dd>
+                    <a href="#">中国当代小说</a>
+                    <a href="#">中国近代</a>
+                    <a href="#">中国古典小说</a>
+                    <a href="#">外国小说</a>
+                    <a href="#">侦探/悬疑/推理</a>
+                    <a href="#">惊悚/恐怖</a>
+                    <a href="#">魔幻</a>
+                    <a href="#">科幻</a>
+                    <a href="#">武侠</a>
+                    <a href="#">军事</a>
+                    <a href="#">社会</a>
+                    <a href="#">都市</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <dl>
+              <dt class="a">文艺</dt>
+            </dl>
+            <div class="hide-bar" style="top: 82px;">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>文学</dt>
+                  <dd>
+                    <a href="#">文集</a>
+                    <a href="#">纪实文学</a>
+                    <a href="#">中国古诗词</a>
+                    <a href="#">中国当代诗歌</a>
+                    <a href="#">外国诗歌</a>
+                    <a href="#">中国当代随笔</a>
+                    <a href="#">外国随笔</a>
+                    <a href="#">民间文学</a>
+                    <a href="#">文学类考试</a>
+                    <a href="#">文学评论与鉴赏</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>传记</dt>
+                  <dd>
+                    <a href="#">财经人物</a>
+                    <a href="#">历代帝王</a>
+                    <a href="#">领袖首脑</a>
+                    <a href="#">军事人物</a>
+                    <a href="#">政治人物</a>
+                    <a href="#">历史人物</a>
+                    <a href="#">哲学家</a>
+                    <a href="#">年谱</a>
+                    <a href="#">自传</a>
+                    <a href="#">影视明星</a>
+                    <a href="#">体育明星</a>
+                    <a href="#">教育家</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>艺术</dt>
+                  <dd>
+                    <a href="#">艺术理论</a>
+                    <a href="#">绘画</a>
+                    <a href="#">书法/篆刻</a>
+                    <a href="#">影视/媒体艺术</a>
+                    <a href="#">音乐</a>
+                    <a href="#">舞蹈</a>
+                    <a href="#">雕塑</a>
+                    <a href="#">建筑艺术</a>
+                    <a href="#">小人书/连环画</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <dl>
+              <dt class="a">人文社科</dt>
+            </dl>
+            <div class="hide-bar" style="top: 82px;">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>历史</dt>
+                  <dd>
+                    <a href="#">中国史</a>
+                    <a href="#">世界史</a>
+                    <a href="#">史家名著</a>
+                    <a href="#">文物考古</a>
+                    <a href="#">史学理论</a>
+                    <a href="#">地方史志</a>
+                    <a href="#">历史地理</a>
+                    <a href="#">民族史</a>
+                    <a href="#">历史随笔</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>文化</dt>
+                  <dd>
+                    <a href="#">传统文化</a>
+                    <a href="#">文化评述</a>
+                    <a href="#">文化随笔</a>
+                    <a href="#">各国文化</a>
+                    <a href="#">地域文化</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>心理学</dt>
+                  <dd>
+                    <a href="#">心理百科</a>
+                    <a href="#">心理学著作</a>
+                    <a href="#">心理学理论</a>
+                    <a href="#">色彩心理学</a>
+                    <a href="#">社会心理学</a>
+                    <a href="#">人格心理学</a>
+                    <a href="#">儿童心理学</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>哲学/宗教</dt>
+                  <dd>
+                    <a href="#">古代哲学</a>
+                    <a href="#">世界哲学</a>
+                    <a href="#">伦理学</a>
+                    <a href="#">没学</a>
+                    <a href="#">哲学史</a>
+                    <a href="#">近现代哲学</a>
+                    <a href="#">佛教</a>
+                    <a href="#">基督教</a>
+                    <a href="#">道教</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>社会科学</dt>
+                  <dd>
+                    <a href="#">社会科学总论</a>
+                    <a href="#">社会学</a>
+                    <a href="#">文化人类学</a>
+                    <a href="#">新闻传播</a>
+                    <a href="#">语言文学</a>
+                    <a href="#">名家作品集</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>法律</dt>
+                  <dd>
+                    <a href="#">民法</a>
+                    <a href="#">经济法</a>
+                    <a href="#">法律法规</a>
+                    <a href="#">法律实务</a>
+                    <a href="#">理论法学</a>
+                    <a href="#">刑法</a>
+                    <a href="#">法律随笔</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <dl>
+              <dt class="a">科技</dt>
+            </dl>
+            <div class="hide-bar" style="top: 82px;">
+              <div class="hide-bar-content">
+                <dl>
+                  <dt>科普读物</dt>
+                  <dd>
+                    <a href="#">宇宙知识</a>
+                    <a href="#">人类故事</a>
+                    <a href="#">生物世界</a>
+                    <a href="#">科学世界</a>
+                    <a href="#">生态环境</a>
+                    <a href="#">百科知识</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>计算机/网络</dt>
+                  <dd>
+                    <a href="#">计算机理论</a>
+                    <a href="#">硬件 外部设备 维修</a>
+                    <a href="#">操作系统/系统开发</a>
+                    <a href="#">数据库</a>
+                    <a href="#">程序设计</a>
+                    <a href="#">网络与数据通信</a>
+                    <a href="#">软件工程/开发项目管理</a>
+                    <a href="#">人工智能</a>
+                    <a href="#">计算机考试认证</a>
+                    <a href="#">信息安全</a>
+                    <a href="#">计算机体系结构</a>
+                    <a href="#">计算机教材</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>自然科学</dt>
+                  <dd>
+                    <a href="#">总论</a>
+                    <a href="#">数学</a>
+                    <a href="#">力学</a>
+                    <a href="#">物理学</a>
+                    <a href="#">化学</a>
+                    <a href="#">天文学</a>
+                    <a href="#">地球科学</a>
+                    <a href="#">科技史</a>
+                    <a href="#">自然科学类考试</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>工业技术</dt>
+                  <dd>
+                    <a href="#">一般工业技术</a>
+                    <a href="#">机械/仪表工业</a>
+                    <a href="#">电工技术</a>
+                    <a href="#">电子 通信</a>
+                    <a href="#">化学工业</a>
+                    <a href="#">冶金工业</a>
+                    <a href="#">矿业工程</a>
+                    <a href="#">能源与动力工程</a>
+                    <a href="#">原子能技术</a>
+                    <a href="#">水利工程</a>
+                    <a href="#">汽车与交通运输</a>
+                    <a href="#">航天/航空</a>
+                    <a href="#">环境科学</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/productGroup.html?name=童书">童书</a></li>
+      <li><a href="/productGroup.html?name=教辅">教辅</a></li>
+      <li><a href="/productGroup.html?name=小说">小说</a></li>
+      <li><a href="/productGroup.html?name=文艺">文艺</a></li>
+      <li><a href="/productGroup.html?name=艺术">艺术</a></li>
+      <li><a href="/productGroup.html?name=成功励志">成功励志</a></li>
+      <li><a href="/productGroup.html?name=管理">管理</a></li>
+    </ul>
+  </div>
+  <div class="w-1200 center position-relative">
+    <div id="turn-cast">
+      <div id="main-cast" onmouserover="stop()">
+        <a href="#1"><img src="images/750-1577966591.jpg" alt=""></a><a href="#2"><img src="images/750-315-1577781467.jpg" alt=""></a><a href="#3"><img src="images/750x315-1578030501.jpg" alt=""></a><a href="#4"><img src="images/ts750x315.jpg"
+            alt=""></a>
+      </div>
+      <ul>
+        <li class="cast checked"></li>
+        <li class="cast"></li>
+        <li class="cast"></li>
+        <li class="cast"></li>
+      </ul>
+      <span id="left">
+        <</span> <span id="right">>
+      </span>
+    </div>
+    <div class="position-absolute nav-right">
+      <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+        <a href="">
+          <img src="images/index/newbook/49-5-1557798926.jpg" alt="" class="w-100">
+        </a>
+        <div class="line"></div>
+        <a href="">
+          <img src="images/index/newbook/zhong-1557820374.jpg" alt="" class="w-100">
+        </a>
+        <div class="line"></div>
+        <a href="">
+          <img src="images/index/newbook/382X140-1577794308.jpg" alt="" class="w-100">
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+  <div>
+    <div class="center w-1200 border-box d-flex">
+      <div class="w-80 overflow-hidden" id="tabs" xy-name="tab">
+        <div class="position-relative border-b head-of-content">
+          <span class="mark d-ib">热门推荐</span>
+          <ul class="f-l ml-2 list-unstyle d-b clear-both nav-card position-absolute">
+            <li><span class="nav-card-a px-2 d-ib active">主打</span></li>
+            <li><span class="nav-card-a px-2 d-ib">童书</span></li>
+            <li><span class="nav-card-a px-2 d-ib">文艺</span></li>
+            <li><span class="nav-card-a px-2 d-ib">小说</span></li>
+          </ul>
+        </div>
+        <div class="content-box">
+          <div class="content-list content-list-active">
+            <div class="border bt-0 border-box d-flex content-box">
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="皮囊">
+                      <img src="images\index\newbook\27872661-1_l_13.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="皮囊">皮囊</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="管理陷阱：《能力陷阱》作者激赏推荐">
+                      <img src="images\index\newbook\28472325-1_l_5.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="管理陷阱：《能力陷阱》作者激赏推荐">管理陷阱：《能力陷阱》作者激赏推荐</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="product.html" title="了不起的我：自我发展的心理学（陈海贤重磅新作，得到App10万+付费用户亲测有效 ）">
+                      <img src="images\index\newbook\28469677-1_l_20.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="product.html" title="了不起的我：自我发展的心理学（陈海贤重磅新作，得到App10万+付费用户亲测有效 ）">了不起的我：自我发展的心理学（陈海贤重磅新作，得到App10万+付费用户亲测有效 ）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="栎树的囚徒（当当独家500本签名版随机发售）">
+                      <img src="images\index\newbook\28473425-1_l_3.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="栎树的囚徒（当当独家500本签名版随机发售）">栎树的囚徒（当当独家500本签名版随机发售）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="（萌趣简笔画）想画什么都可以！超萌生活手绘3000例">
+                      <img src="images\index\newbook\27921399-1_l_6.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="（萌趣简笔画）想画什么都可以！超萌生活手绘3000例">（萌趣简笔画）想画什么都可以！超萌生活手绘3000例</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="范志红日历">
+                      <img src="images\index\newbook\27940133-1_l_7.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="范志红日历">范志红日历</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="因为这是你的人生（蔡康永19年新作，当当专享签章版）">
+                      <img src="images\index\newbook\28484107-1_l_8.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="因为这是你的人生（蔡康永19年新作，当当专享签章版）">因为这是你的人生（蔡康永19年新作，当当专享签章版）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="1001英语单词大书：单词大书里的蓝宝书">
+                      <img src="images\index\newbook\28480251-1_l_6.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="1001英语单词大书：单词大书里的蓝宝书">1001英语单词大书：单词大书里的蓝宝书</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="穿越时空看文明—全景手绘中国史（精装全4册）">
+                      <img src="images\index\newbook\27904241-1_l_3.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="穿越时空看文明—全景手绘中国史（精装全4册）">穿越时空看文明—全景手绘中国史（精装全4册）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="迪士尼幼儿英语">
+                      <img src="images\index\newbook\28491588-1_l_6.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="迪士尼幼儿英语">迪士尼幼儿英语</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- -------- -->
+          <div class="content-list ">
+            <div class="border bt-0 border-box d-flex content-box">
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="崔玉涛讲给孩子的身体健康书（套装6册）">
+                      <img src="images\index\newbook\27886085-1_l_2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="崔玉涛讲给孩子的身体健康书（套装6册）">崔玉涛讲给孩子的身体健康书（套装6册）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="百年百部中国儿童图画书经典书系（第一辑，套装8本）">
+                      <img src="images\index\newbook\27948478-1_l_3.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="百年百部中国儿童图画书经典书系（第一辑，套装8本）">百年百部中国儿童图画书经典书系（第一辑，套装8本）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="小读客·梅格时空大冒险（套装全5册）（含《时间的折皱》[又名《时间的皱折》《时间的皱纹》]、《银河的裂缝》等）">
+                      <img src="images\index\newbook\25099944-1_l_12.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="小读客·梅格时空大冒险（套装全5册）（含《时间的折皱》[又名《时间的皱折》《时间的皱纹》]、《银河的裂缝》等）">小读客·梅格时空大冒险（套装全5册）（含《时间的折皱》[又名《时间的皱折》《时间的皱纹》]、《银河的裂缝》等）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="皇家兔">
+                      <img src="images\index\newbook\27893510-1_l_5.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="皇家兔">皇家兔</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="迷人的逻辑思维游戏书（全3册）">
+                      <img src="images\index\newbook\27903961-1_l_5.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="迷人的逻辑思维游戏书（全3册）">迷人的逻辑思维游戏书（全3册）</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="曹文轩文集精装典藏礼盒版">
+                      <img src="images\index\newbook\25300595-1_l_33.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="曹文轩文集精装典藏礼盒版">曹文轩文集精装典藏礼盒版</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="卡梅拉典藏大礼盒">
+                      <img src="images\index\newbook\28487426-1_l_2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="卡梅拉典藏大礼盒">卡梅拉典藏大礼盒</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="北斗儿童地理百科全书?世界地理地图+中国地理地图（套装2册">
+                      <img src="images\index\newbook\27919654-1_l_9.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="北斗儿童地理百科全书?世界地理地图+中国地理地图（套装2册">北斗儿童地理百科全书?世界地理地图+中国地理地图（套装2册</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="藏在地图里的系列">
+                      <img src="images\index\newbook\27868280-1_l_17.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="藏在地图里的系列">藏在地图里的系列</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+                <div class="card w-20 py-3">
+                  <div class="text-center">
+                    <a href="" title="10个我喜欢你的理由：全6册">
+                      <img src="images\index\newbook\27914549-1_l_5.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <p class="title mb-1 overflow-hidden"><a href="" title="10个我喜欢你的理由：全6册">10个我喜欢你的理由：全6册</a></p>
+                    <span class="currentPrice">￥37.30</span>
+                    <span class="originPrice">￥45.90</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- 文艺 -->
+          <div class="content-list">
+            <div class="border bt-0 border-box d-flex content-box">
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="华为没有成功，只有成长：任正非传">
+                    <img src="images\index\newbook\27943377-1_l_2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="华为没有成功，只有成长：任正非传">华为没有成功，只有成长：任正非传</a></p>
+                  <span class="currentPrice">￥37.8</span>
+                  <span class="originPrice">￥49.8</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="拾莲">
+                    <img src="images\index\newbook\28495489-1_l_9.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="拾莲">拾莲</a></p>
+                  <span class="currentPrice">￥89.1</span>
+                  <span class="originPrice">￥98</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="庚子千人历">
+                    <img src="images\index\newbook\27909323-1_l_13.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="庚子千人历">庚子千人历</a></p>
+                  <span class="currentPrice">￥38.2</span>
+                  <span class="originPrice">￥98</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="喵呜不停 2020年日历 新禧版（当当独家定制福气利是包）">
+                    <img src="images\index\newbook\28475149-1_l_5.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="喵呜不停 2020年日历 新禧版（当当独家定制福气利是包）">喵呜不停 2020年日历 新禧版（当当独家定制福气利是包）</a></p>
+                  <span class="currentPrice">￥60</span>
+                  <span class="originPrice">￥128</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="艺术的故事豪华本（赠送笔记本）">
+                    <img src="images\index\newbook\410272858-1_l_1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="艺术的故事豪华本（赠送笔记本）">艺术的故事豪华本（赠送笔记本）</a></p>
+                  <span class="currentPrice">￥294</span>
+                  <span class="originPrice">￥625</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="丰子恺万般滋味，都是生活">
+                    <img src="images\index\newbook\25308985-1_l_8.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="丰子恺万般滋味，都是生活">丰子恺万般滋味，都是生活</a></p>
+                  <span class="currentPrice">￥31.2</span>
+                  <span class="originPrice">￥42</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="康辉：平均分（当当印签版书法）">
+                    <img src="images\index\newbook\28476998-1_l_6.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="康辉：平均分（当当印签版书法）">康辉：平均分（当当印签版书法）</a></p>
+                  <span class="currentPrice">￥37.7</span>
+                  <span class="originPrice">￥58</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="半小时漫画唐诗2（内含签名卡片）（漫画科普开创者二混子新作！全网粉丝700万！看起来都是笑点，实际上全是考点！）">
+                    <img src="images\index\newbook\27946591-1_l_3.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="半小时漫画唐诗2（内含签名卡片）（漫画科普开创者二混子新作！全网粉丝700万！看起来都是笑点，实际上全是考点！）">半小时漫画唐诗2（内含签名卡片）（漫画科普开创者二混子新作！全网粉丝700万！看起来都是笑点，实际上全是考点！）</a></p>
+                  <span class="currentPrice">￥37.4</span>
+                  <span class="originPrice">￥49.9</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="戴建业作品集 九卷本（签名版）（超千万人点赞的国民教授戴建业，全新作品集震撼发布）">
+                    <img src="images\index\newbook\27947113-1_l_9.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="戴建业作品集 九卷本（签名版）（超千万人点赞的国民教授戴建业，全新作品集震撼发布）">戴建业作品集 九卷本（签名版）（超千万人点赞的国民教授戴建业，全新作品集震撼发布）</a></p>
+                  <span class="currentPrice">￥448.4</span>
+                  <span class="originPrice">￥538</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="梦里不知身是客 : 宋朝词人的诗酒年华">
+                    <img src="images\index\newbook\28473430-1_l_2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="梦里不知身是客 : 宋朝词人的诗酒年华">梦里不知身是客 : 宋朝词人的诗酒年华</a></p>
+                  <span class="currentPrice">￥44</span>
+                  <span class="originPrice">￥55</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  小说-->
+          <div class="content-list">
+            <div class="border bt-0 border-box d-flex content-box">
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="权威定本四大名著： 红楼梦 三国演义? 水浒传? 西游记 当当网全国独家">
+                    <img src="images\index\newbook\20605371-1_l_5.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="权威定本四大名著： 红楼梦 三国演义? 水浒传? 西游记 当当网全国独家">权威定本四大名著： 红楼梦 三国演义? 水浒传? 西游记 当当网全国独家</a></p>
+                  <span class="currentPrice">￥128</span>
+                  <span class="originPrice">￥197</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="盗墓笔记">
+                    <img src="images\index\newbook\27882863-1_l_2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="盗墓笔记">盗墓笔记</a></p>
+                  <span class="currentPrice">￥322.6</span>
+                  <span class="originPrice">￥405</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="失乐园">
+                    <img src="images\index\newbook\25182491-1_l_6.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="失乐园">失乐园</a></p>
+                  <span class="currentPrice">￥29.2</span>
+                  <span class="originPrice">￥45</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="一个陌生女人的来信（2019精装彩插本，北大权威翻译家高中甫、韩耀成德文直译，豆瓣9.4高评分）">
+                    <img src="images\index\newbook\27915734-1_l_6.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="一个陌生女人的来信（2019精装彩插本，北大权威翻译家高中甫、韩耀成德文直译，豆瓣9.4高评分）">一个陌生女人的来信（2019精装彩插本，北大权威翻译家高中甫、韩耀成德文直译，豆瓣9.4高评分）</a></p>
+                  <span class="currentPrice">￥30.8</span>
+                  <span class="originPrice">￥41</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="《沙丘》六部曲（套装全6册）（每个“不可不读”的书单上都有《沙丘》！中文版初次完整出版！）（读客外国小说文库）">
+                    <img src="images\index\newbook\27943126-1_l_6.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="《沙丘》六部曲（套装全6册）（每个“不可不读”的书单上都有《沙丘》！中文版初次完整出版！）（读客外国小说文库）">《沙丘》六部曲（套装全6册）（每个“不可不读”的书单上都有《沙丘》！中文版初次完整出版！）（读客外国小说文库）</a></p>
+                  <span class="currentPrice">￥335.7</span>
+                  <span class="originPrice">￥394.9</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="刘慈欣科幻作品典藏套装">
+                    <img src="images\index\newbook\25353757-1_l_2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="刘慈欣科幻作品典藏套装">刘慈欣科幻作品典藏套装</a></p>
+                  <span class="currentPrice">￥192.1</span>
+                  <span class="originPrice">￥216</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="上山：唐朝诗人的朋友圈">
+                    <img src="images\index\newbook\28488790-1_l_2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="上山：唐朝诗人的朋友圈">上山：唐朝诗人的朋友圈</a></p>
+                  <span class="currentPrice">￥34.5</span>
+                  <span class="originPrice">￥48</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="风之影 定制版（西班牙400年来最好的小说。“风之影四部曲”简体中文完整版首次登陆中国）">
+                    <img src="images\index\newbook\28469707-1_l_6.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="风之影 定制版（西班牙400年来最好的小说。“风之影四部曲”简体中文完整版首次登陆中国）">风之影 定制版（西班牙400年来最好的小说。“风之影四部曲”简体中文完整版首次登陆中国）</a></p>
+                  <span class="currentPrice">￥51</span>
+                  <span class="originPrice">￥68</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="孤儿故事">
+                    <img src="images\index\newbook\28471006-1_l_3.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="孤儿故事">孤儿故事</a></p>
+                  <span class="currentPrice">￥35</span>
+                  <span class="originPrice">￥42</span>
+                </div>
+              </div>
+              <div class="card w-20 py-3">
+                <div class="text-center">
+                  <a href="" title="我们的时代（套装全三册，亲笔签名本）">
+                    <img src="images\index\newbook\28486321-1_l_3.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-center">
+                  <p class="title mb-1 overflow-hidden"><a href="" title="我们的时代（套装全三册，亲笔签名本）">我们的时代（套装全三册，亲笔签名本）</a></p>
+                  <span class="currentPrice">￥117.5</span>
+                  <span class="originPrice">￥148.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="w-20">
+        <div class="pl-1 sidebar-head" id="sidebar-head1" xy-name="tab">
+          <div>
+            新书热卖榜
+          </div>
+          <div>
+            <ul class=" d-flex list-unstyle justify-content-around text-center">
+              <li class="nav-card-a w-20 border-box active">总榜</li>
+              <li class="nav-card-a w-20 border-box">童书</li>
+              <li class="nav-card-a w-20 border-box">教辅</li>
+              <li class="nav-card-a w-20 border-box">教材</li>
+              <li class="nav-card-a w-20 border-box">政治</li>
+            </ul>
+          </div>
+          <div class="main" >
+            <ul id="sidebar1" xy-name="sidebar" class="content-list content-list-active ">
+              <!-- 1
+              <li class="list1 intro">
+                <span class="float-left hot">
+                  1
+                </span>
+                <p class="main-title">
+                  <a href="" title="庆余年·北海有雾（陈道明、张若昀、吴刚、李沁、郭麒麟、肖战主演电视剧原著小说，修订版第三卷）">庆余年·北海有雾（陈道明、张若昀、吴刚\</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left hot">1</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images\28499898-1_l_6.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="庆余年·北海有雾（陈道明、张若昀、吴刚、李沁、郭麒麟、肖战主演电视剧原著小说，修订版第三卷）">庆余年·北海有雾（陈道明、张若昀、吴刚\</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥27.30
+                    </p>
+                    <p class="originPrice">
+                      ￥39.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li>
+               2 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left hot">
+                  2
+                </span>
+                <p class="main-title">
+                  <a href="" title="少年的你（周冬雨、易烊千玺主演电影拍摄过程全记录，主演和主创们亲自执笔创作，首谈对电影的感受。心存念想，不说再见。）">少年的你（周冬雨、易烊千玺主演</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left hot">2</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28512571-1_l_4.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="少年的你（周冬雨、易烊千玺主演电影拍摄过程全记录，主演和主创们亲自执笔创作，首谈对电影的感受。心存念想，不说再见。）">少年的你（周冬雨、易烊千玺主演</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥168.00
+                    </p>
+                    <p class="originPrice">
+                      ￥168.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li> -->
+              <!-- 3 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left hot">
+                  3
+                </span>
+                <p class="main-title">
+                  <a href="" title="庆余年·人在京都（陈道明、张若昀、吴刚、李沁、肖战主演电视剧原著小说，修订版第二卷）">庆余年·北海有雾（陈道明、张若昀、吴刚\</a>
+                </p>
+              </li> -->
+              <!-- <li class="list1 item none">
+                <span class="float-left hot">3</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28490031-1_l_6.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="庆余年·人在京都（陈道明、张若昀、吴刚、李沁、肖战主演电视剧原著小说，修订版第二卷）">庆余年·北海有雾（陈道明、张若昀、吴刚\</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥36.90
+                    </p>
+                    <p class="originPrice">
+                      ￥39.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li> -->
+              <!-- 4 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  4
+                </span>
+                <p class="main-title">
+                  <a href="" title="穿过地平线 又名:看看我们的地球 统编小学语文教材四年级下册快乐读书吧推荐必读书目 （中小学课外阅读必读名著）">穿过地平线 又名:看看我们的地球 统编小学语文教材四年级下册快乐读书吧推荐必读书目 （中小学课外阅读必读名著）</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left">4</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28504960-1_l_2.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="穿过地平线 又名:看看我们的地球 统编小学语文教材四年级下册快乐读书吧推荐必读书目 （中小学课外阅读必读名著）">穿过地平线 又名:看看我们的地球 统编小学语文教材四年级下册快乐读书吧推荐必读书目 （中小学课外阅读必读名著）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥19.80
+                    </p>
+                    <p class="originPrice">
+                      ￥24.80
+                    </p>
+                  </div>
+        
+                </div>
+              </li> -->
+              <!-- 5 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  5
+                </span>
+                <p class="main-title">
+                  <a href="" title="直击本质：洞察事物底层逻辑的思考方法（实现个体跃迁、迭代升级不可或缺的是深度思考法和深度思维力，附赠开放式思维导图）">直击本质：洞察事物底层逻辑的思考方法（实现个体跃迁、迭代升级不可或缺的是深度思考法和深度思维力，附赠开放式思维导图）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">5</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28504194-1_l_10.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="直击本质：洞察事物底层逻辑的思考方法（实现个体跃迁、迭代升级不可或缺的是深度思考法和深度思维力，附赠开放式思维导图）">直击本质：洞察事物底层逻辑的思考方法（实现个体跃迁、迭代升级不可或缺的是深度思考法和深度思维力，附赠开放式思维导图）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥37.30
+                    </p>
+                    <p class="originPrice">
+                      ￥52.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li> -->
+              <!-- 6 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  6
+                </span>
+                <p class="main-title">
+                  <a href="" title="变量：推演中国经济基本盘（罗振宇2020年跨年演讲推荐书目）">变量：推演中国经济基本盘（罗振宇2020年跨年演讲推荐书目）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">6</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28496876-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="变量：推演中国经济基本盘（罗振宇2020年跨年演讲推荐书目）">变量：推演中国经济基本盘（罗振宇2020年跨年演讲推荐书目）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥51.00
+                    </p>
+                    <p class="originPrice">
+                      ￥69.00
+                    </p>
+                  </div>        
+                </div>
+              </li> -->
+              <!-- 7 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  7
+                </span>
+                <p class="main-title">
+                  <a href="" title="中国历史常识（一本华人世界公认的国史巨著，民国以来畅销至今的国史读本。）">中国历史常识（一本华人世界公认的国史巨著，民国以来畅销至今的国史读本。）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">7</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28494807-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="中国历史常识（一本华人世界公认的国史巨著，民国以来畅销至今的国史读本。）">中国历史常识（一本华人世界公认的国史巨著，民国以来畅销至今的国史读本。）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥39.10
+                    </p>
+                    <p class="originPrice">
+                      ￥49.80
+                    </p>
+                  </div>        
+                </div>
+              </li> -->
+              <!-- 8 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  8
+                </span>
+                <p class="main-title">
+                  <a href="" title="东野圭吾：梦幻花（东野圭吾构思十年悬疑力作，比肩《白夜行》，新收录创作手记）">东野圭吾：梦幻花（东野圭吾构思十年悬疑力作，比肩《白夜行》，新收录创作手记）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">8</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28493515-1_l_6.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="东野圭吾：梦幻花（东野圭吾构思十年悬疑力作，比肩《白夜行》，新收录创作手记）">东野圭吾：梦幻花（东野圭吾构思十年悬疑力作，比肩《白夜行》，新收录创作手记）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥37.30
+                    </p>
+                    <p class="originPrice">
+                      ￥49.80
+                    </p>
+                  </div>        
+                </div>
+              </li> -->
+              <!-- 9 -->
+              <!-- <li class="list1 intro">
+                <span class="float-left">
+                  9
+                </span>
+                <p class="main-title">
+                  <a href="" title="钱从哪里来：中国家庭的财富方案（罗振宇2020年跨年演讲推荐书目）">钱从哪里来：中国家庭的财富方案（罗振宇2020年跨年演讲推荐书目）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">9</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28496877-1_l_6.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="钱从哪里来：中国家庭的财富方案（罗振宇2020年跨年演讲推荐书目）">钱从哪里来：中国家庭的财富方案（罗振宇2020年跨年演讲推荐书目）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥44.25
+                    </p>
+                    <p class="originPrice">
+                      ￥59.00
+                    </p>
+                  </div>        
+                </div>
+              </li> -->
+              <!-- 10 -->
+              <!-- <li class="list1 intro none">
+                <span class="float-left">
+                  10
+                </span>
+                <p class="main-title">
+                  <a href="" title="大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）">大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）</a>
+                </p>
+              </li>
+              <li class="list1 item">
+                <span class="float-left">10</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28500559-1_l_5.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）">大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥61.60
+                    </p>
+                    <p class="originPrice">
+                      ￥78.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li> --> 
+            </ul>
+            <ul id="sidebar2" xy-name="sidebar" class="content-list">
+              <!-- 1 -->
+              <li class="list1 intro">
+                <span class="float-left hot">
+                  1
+                </span>
+                <p class="main-title">
+                  <a href="" title="大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）">大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left hot">1</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28500559-1_l_5.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）">大家都想系列绘本：在试错中成长（全4册，歪歪兔童书馆出品）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥61.60
+                    </p>
+                    <p class="originPrice">
+                      ￥78.00
+                    </p>
+                  </div>       
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="list1 intro">
+                <span class="float-left hot">
+                  2
+                </span>
+                <p class="main-title">
+                  <a href="" title="数学帮帮忙（全25册+导读手册）超值礼盒装 （多功能数学绘本，清华附小公开课指定用书！小学数学学习必备）">数学帮帮忙（全25册+导读手册）超值礼盒装 （多功能数学绘本，清华附小公开课指定用书！小学数学学习必备）</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left hot">2</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28480229-1_l_10.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="数学帮帮忙（全25册+导读手册）超值礼盒装 （多功能数学绘本，清华附小公开课指定用书！小学数学学习必备）">数学帮帮忙（全25册+导读手册）超值礼盒装 （多功能数学绘本，清华附小公开课指定用书！小学数学学习必备）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥233.00
+                    </p>
+                    <p class="originPrice">
+                      ￥275.00
+                    </p>
+                  </div>        
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="list1 intro">
+                <span class="float-left hot">
+                  3
+                </span>
+                <p class="main-title">
+                  <a href="" title="笑猫日记——幸运女神的宠儿">笑猫日记——幸运女神的宠儿</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left hot">3</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28507559-1_l_2.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="笑猫日记——幸运女神的宠儿">笑猫日记——幸运女神的宠儿</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥17.80
+                    </p>
+                    <p class="originPrice">
+                      ￥20.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  4
+                </span>
+                <p class="main-title">
+                  <a href="" title="菲菲生气了 ——美国凯迪克大奖绘本 夏洛特·佐罗托夫金奖绘本！">菲菲生气了 ——美国凯迪克大奖绘本 夏洛特·佐罗托夫金奖绘本！</a>
+                </p>
+              </li>
+              <li class="list1 item none">
+                <span class="float-left">4</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28495583-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="菲菲生气了 ——美国凯迪克大奖绘本 夏洛特·佐罗托夫金奖绘本！">菲菲生气了 ——美国凯迪克大奖绘本 夏洛特·佐罗托夫金奖绘本！</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥35.40
+                    </p>
+                    <p class="originPrice">
+                      ￥39.80
+                    </p>
+                  </div>
+        
+                </div>
+              </li>
+              <!-- 5 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  5
+                </span>
+                <p class="main-title">
+                  <a href="" title="黑暗物质三部曲：（套装全3册）10~16岁国际大奖童书（载入史册的世界儿童文学经典！关于魔法、精灵、神话、平行世界的奇幻旅程）">黑暗物质三部曲：（套装全3册）10~16岁国际大奖童书（载入史册的世界儿童文学经典！关于魔法、精灵、神话、平行世界的奇幻旅程）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">5</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28497063-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="黑暗物质三部曲：（套装全3册）10~16岁国际大奖童书（载入史册的世界儿童文学经典！关于魔法、精灵、神话、平行世界的奇幻旅程）">黑暗物质三部曲：（套装全3册）10~16岁国际大奖童书（载入史册的世界儿童文学经典！关于魔法、精灵、神话、平行世界的奇幻旅程）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥132.00
+                    </p>
+                    <p class="originPrice">
+                      ￥155.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li>
+              <!-- 6 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  6
+                </span>
+                <p class="main-title">
+                  <a href="" title="常青藤爸爸陪孩子一起讲故事学成语(共3册):精选100个成语故事，活学活用，附赠音频">常青藤爸爸陪孩子一起讲故事学成语(共3册):精选100个成语故事，活学活用，附赠音频</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">6</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28490679-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="常青藤爸爸陪孩子一起讲故事学成语(共3册):精选100个成语故事，活学活用，附赠音频">常青藤爸爸陪孩子一起讲故事学成语(共3册):精选100个成语故事，活学活用，附赠音频</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥85.30
+                    </p>
+                    <p class="originPrice">
+                      ￥108.00
+                    </p>
+                  </div>        
+                </div>
+              </li>
+              <!-- 7 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  7
+                </span>
+                <p class="main-title">
+                  <a href="" title="物种起源（绘本版）·画给孩子的进化论（6~9岁）（达尔文从来没说过人是猴子变的，让孩子6岁就能读懂《物种起源》！席卷30国！）">物种起源（绘本版）·画给孩子的进化论（6~9岁）（达尔文从来没说过人是猴子变的，让孩子6岁就能读懂《物种起源》！席卷30国！）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">7</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28498673-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="物种起源（绘本版）·画给孩子的进化论（6~9岁）（达尔文从来没说过人是猴子变的，让孩子6岁就能读懂《物种起源》！席卷30国！）">物种起源（绘本版）·画给孩子的进化论（6~9岁）（达尔文从来没说过人是猴子变的，让孩子6岁就能读懂《物种起源》！席卷30国！）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥83.30
+                    </p>
+                    <p class="originPrice">
+                      ￥98.00
+                    </p>
+                  </div>        
+                </div>
+              </li>
+              <!-- 8 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  8
+                </span>
+                <p class="main-title">
+                  <a href="" title="东方有神兽：中国古代文化中的神奇动物们（精装全四册） 一套书让孩子走近传统文化 赠神兽卡牌">东方有神兽：中国古代文化中的神奇动物们（精装全四册） 一套书让孩子走近传统文化 赠神兽卡牌</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">8</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28501855-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="东方有神兽：中国古代文化中的神奇动物们（精装全四册） 一套书让孩子走近传统文化 赠神兽卡牌">东方有神兽：中国古代文化中的神奇动物们（精装全四册） 一套书让孩子走近传统文化 赠神兽卡牌</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥183.00
+                    </p>
+                    <p class="originPrice">
+                      ￥232.00
+                    </p>
+                  </div>        
+                </div>
+              </li>
+              <!-- 9 -->
+              <li class="list1 intro">
+                <span class="float-left">
+                  9
+                </span>
+                <p class="main-title">
+                  <a href="" title="让孩子越玩越聪明的折纸大全（超有趣超好玩的儿童折纸游戏,一目了然的视频指导，一学就会,中国民间艺术家协会盛赞推荐！）">让孩子越玩越聪明的折纸大全（超有趣超好玩的儿童折纸游戏,一目了然的视频指导，一学就会,中国民间艺术家协会盛赞推荐！）</a>
+                </p>
+              </li>
+              <li class="list1 item  none">
+                <span class="float-left">9</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28495383-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="让孩子越玩越聪明的折纸大全（超有趣超好玩的儿童折纸游戏,一目了然的视频指导，一学就会,中国民间艺术家协会盛赞推荐！）">让孩子越玩越聪明的折纸大全（超有趣超好玩的儿童折纸游戏,一目了然的视频指导，一学就会,中国民间艺术家协会盛赞推荐！）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥47.00
+                    </p>
+                    <p class="originPrice">
+                      ￥49.00
+                    </p>
+                  </div>        
+                </div>
+              </li>
+              <!-- 10 -->
+              <li class="list1 intro none">
+                <span class="float-left">
+                  10
+                </span>
+                <p class="main-title">
+                  <a href="" title="漫画宇宙简史（彩色插图本，天体物理学博士孙正凡权威审读，中国科学院国家天文台向全国青少年推荐）">漫画宇宙简史（彩色插图本，天体物理学博士孙正凡权威审读，中国科学院国家天文台向全国青少年推荐）</a>
+                </p>
+              </li>
+              <li class="list1 item">
+                <span class="float-left">10</span>
+                <div class="display-flex justify-content-center">
+                  <div>
+                    <img src="images/index/newbook/28494810-1_l_3.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="content-title">
+                      <a href="" title="漫画宇宙简史（彩色插图本，天体物理学博士孙正凡权威审读，中国科学院国家天文台向全国青少年推荐）">漫画宇宙简史（彩色插图本，天体物理学博士孙正凡权威审读，中国科学院国家天文台向全国青少年推荐）</a>
+                    </div>
+                    <p class="currentPrice">
+                      ￥28.50
+                    </p>
+                    <p class="originPrice">
+                      ￥30.00
+                    </p>
+                  </div>
+        
+                </div>
+              </li>
+            </ul>
+            <ul class="content-list">
+               3
+            </ul>
+            <ul class="content-list">
+              4
+            </ul>
+            <ul class="content-list">
+              5
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div> 
+  </div>
+  <iframe src="foot.html" frameborder="0" width="100%" ></iframe>
+  <script src="server/ajax.js"></script>
+  <script src="server/index.js"></script>
+  <script src="js/comm.js"></script>
+  <script src="js/tab.js"></script>
+  <script src="js/reg.js"></script>
+  <script src="js/sidebar.js"></script>
+  <!-- <script src="js/redirection.js"></script> -->
+</body>
+
+</html>

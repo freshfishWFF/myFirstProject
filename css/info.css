@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  height: 200px;
+  border: 1px solid #e1e1e1;
+  border-top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.container>.left{
+  width: 212px;
+  height: 200px;
+  /* border: 1px solid; */
+}
+.container>.left>a{
+  margin-top: 3px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #25dbfb;
+}
+.container>.left>a.active{
+  background-color: #fff;
+  border: 1px solid #25daff;
+  border-right: 0;
+}
+/* 右侧具体信息栏 */
+.container>.right{
+  width: 988px;
+  padding: 10px;
+}
+.container>.right>div{
+  width: 500px;
+  margin: 0 auto;
+}
+.container>.right>div input[type="text"],
+.container>.right>div input[type="password"]{
+  width: 200px;
+  padding: 5px;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid;
+  outline: none;
+}
